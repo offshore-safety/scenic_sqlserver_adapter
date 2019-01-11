@@ -10,7 +10,7 @@ module Scenic
         }
         ] }
       
-      let(:views_sql) { <<~SQL
+      let(:views_sql) { <<-SQL
           SELECT v.name, sm.definition
           FROM sys.views v
             INNER JOIN sys.sql_modules sm ON v.object_id = sm.object_id

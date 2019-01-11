@@ -16,7 +16,7 @@ module Scenic
         attr_reader :connection
 
         def views_from_sql_server
-          connection.exec_query(<<~SQL)
+          connection.exec_query(<<-SQL)
             SELECT v.name, sm.definition
             FROM sys.views v
               INNER JOIN sys.sql_modules sm ON v.object_id = sm.object_id
