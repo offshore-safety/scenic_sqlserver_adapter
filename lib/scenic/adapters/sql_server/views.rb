@@ -32,7 +32,7 @@ module Scenic
         end
 
         def extract_definition(result)
-          result['definition'].strip.sub(/\A.*#{result['name']}\W*AS\s*/, '')
+          result['definition'].strip.sub(/\A.*#{result['name']}\W*AS\s*/i, '')
         end
       end
       
